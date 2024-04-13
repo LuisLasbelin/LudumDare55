@@ -1,17 +1,23 @@
-[gd_scene load_steps=3 format=3 uid="uid://7becxd7tbxbr"]
+[gd_scene load_steps=6 format=3 uid="uid://7becxd7tbxbr"]
 
 [ext_resource type="PackedScene" uid="uid://bjb5pwaap3br6" path="res://scenes/card.tscn" id="1_8si5p"]
+[ext_resource type="Script" path="res://scripts/StartGame.gd" id="1_abc0c"]
+[ext_resource type="Resource" uid="uid://csww72dbjtog3" path="res://assets/cards/sacrifice/Sacrifice.tres" id="3_yhu8d"]
+[ext_resource type="Resource" uid="uid://btxdqt6p2l5nn" path="res://assets/cards/summon_green_slime/SummonGreenSlime.tres" id="4_7xv7t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xktb1"]
 size = Vector2(1337, 714)
 
 [node name="GameScreen" type="Node2D"]
+script = ExtResource("1_abc0c")
 
 [node name="Card" parent="." instance=ExtResource("1_8si5p")]
 position = Vector2(221, 940)
+card_data = ExtResource("3_yhu8d")
 
 [node name="Card2" parent="." instance=ExtResource("1_8si5p")]
 position = Vector2(682, 939)
+card_data = ExtResource("4_7xv7t")
 
 [node name="SummonArea" type="Area2D" parent="."]
 input_pickable = false

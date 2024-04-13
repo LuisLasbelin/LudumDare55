@@ -1,12 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbej6su5ftpfk"]
+[gd_scene load_steps=4 format=3 uid="uid://bbej6su5ftpfk"]
 
-[ext_resource type="Script" path="res://scripts/creatures/Creature.gd" id="1_48s7b"]
+[ext_resource type="Script" path="res://scripts/creatures/Creature.gd" id="1_k2jqe"]
 [ext_resource type="Texture2D" uid="uid://5q3wpuphtnag" path="res://icon.svg" id="2_vibeh"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5u2qc"]
+size = Vector2(132, 135)
+
 [node name="Creature" type="Node2D"]
-script = ExtResource("1_48s7b")
+script = ExtResource("1_k2jqe")
 metadata/_edit_vertical_guides_ = [337.0]
 metadata/_edit_horizontal_guides_ = [585.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_vibeh")
+
+[node name="CreatureArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CreatureArea"]
+position = Vector2(2, -3.5)
+shape = SubResource("RectangleShape2D_5u2qc")
