@@ -1,0 +1,7 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://b27r0wbp4lith"]
+
+[ext_resource type="FontFile" uid="uid://c4g1u4pttqn5w" path="res://assets/fonts/Crimson-Semibold.ttf" id="1_branx"]
+
+[resource]
+font = ExtResource("1_branx")
+font_color = Color(0, 0, 0, 1)

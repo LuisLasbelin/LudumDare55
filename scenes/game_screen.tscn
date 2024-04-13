@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://7becxd7tbxbr"]
+
+[ext_resource type="Script" path="res://scripts/CardsEffectsManager.gd" id="1_4su07"]
+[ext_resource type="PackedScene" uid="uid://bjb5pwaap3br6" path="res://scenes/card.tscn" id="1_8si5p"]
+[ext_resource type="LabelSettings" uid="uid://b27r0wbp4lith" path="res://assets/fonts/card_text.tres" id="2_42lac"]
+
+[node name="GameScreen" type="Node2D"]
+
+[node name="CardsEffectsManager" type="Node" parent="."]
+script = ExtResource("1_4su07")
+
+[node name="Card" parent="." instance=ExtResource("1_8si5p")]
+position = Vector2(221, 940)
+
+[node name="Card2" parent="." instance=ExtResource("1_8si5p")]
+position = Vector2(682, 939)
+
+[node name="Card3" parent="." instance=ExtResource("1_8si5p")]
+position = Vector2(452, 941)
+
+[node name="Sidebar" type="Node2D" parent="."]
+
+[node name="Label" type="Label" parent="Sidebar"]
+offset_left = 1622.0
+offset_top = 124.0
+offset_right = 1880.0
+offset_bottom = 304.0
+text = "000"
+label_settings = ExtResource("2_42lac")
