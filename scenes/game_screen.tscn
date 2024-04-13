@@ -13,9 +13,6 @@ position = Vector2(221, 940)
 [node name="Card2" parent="." instance=ExtResource("1_8si5p")]
 position = Vector2(682, 939)
 
-[node name="Card3" parent="." instance=ExtResource("1_8si5p")]
-position = Vector2(452, 941)
-
 [node name="SummonArea" type="Area2D" parent="."]
 input_pickable = false
 

@@ -3,6 +3,6 @@
 [ext_resource type="Script" path="res://scripts/cards/SummonCard.gd" id="1_aw6no"]
 [ext_resource type="Resource" uid="uid://bht00wl74q725" path="res://assets/creatures/green_slime.tres" id="2_q5khg"]
 
-[node name="SummonGreenSlime" type="Node"]
+[node name="CardEffect" type="Node"]
 script = ExtResource("1_aw6no")
 creature_to_summon = ExtResource("2_q5khg")
