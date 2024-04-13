@@ -3,5 +3,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Hand.draw_initial_hand()
+	GameState.shuffle_deck()
+	GameState.draw_card()
+	GameState.draw_card()
+	GameState.draw_card()
 

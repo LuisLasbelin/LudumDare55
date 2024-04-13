@@ -4,8 +4,6 @@ signal drawn_card(card : CardData)
 @export var current_mana : int = 0
 @export var cards_in_discard : Array[CardData] = []
 @export var cards_in_hand : Array[CardData] = [
-	load("res://assets/cards/sacrifice/Sacrifice.tres"),
-	load("res://assets/cards/summon_green_slime/SummonGreenSlime.tres")
 ]
 @export var cards_in_deck : Array[CardData] = [
 	load("res://assets/cards/sacrifice/Sacrifice.tres"),
@@ -20,6 +18,11 @@ func draw_card():
 	cards_in_hand.append(cards_in_deck[0])
 	drawn_card.emit(cards_in_deck[0])
 	cards_in_deck.pop_at(0)
+
+
+func shuffle_deck():
+	randomize()
+	cards_in_deck.shuffle()
 
 
 func discard(card : CardData):
