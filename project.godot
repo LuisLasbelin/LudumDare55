@@ -17,7 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GameState="*res://scripts/AL_GameState.gd"
+GameState="*res://scripts/autoload/AL_GameState.gd"
+CardsEffectsManager="*res://scripts/autoload/CardsEffectsManager.gd"
 
 [display]
 

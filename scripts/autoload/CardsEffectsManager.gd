@@ -36,6 +36,7 @@ func sacrifice(creature : Creature):
 			GameState.current_mana += creature.get_mana()
 			spawn["creature"] = false
 			creature.queue_free()
+			print("DEBUG: sacrificed for ", creature.get_mana(), " player now has ", GameState.current_mana, " mana.")
 			return true
 	printerr("ERROR: there has been an error with sacrificing ", creature)
 	return false
