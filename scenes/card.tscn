@@ -1,9 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjb5pwaap3br6"]
+[gd_scene load_steps=4 format=3 uid="uid://bjb5pwaap3br6"]
 
 [ext_resource type="Script" path="res://scripts/cards/Card.gd" id="1_8cpji"]
 [ext_resource type="Texture2D" uid="uid://gijnwrqxkv6l" path="res://assets/sprites/card.png" id="1_jh113"]
-[ext_resource type="LabelSettings" uid="uid://b27r0wbp4lith" path="res://assets/fonts/card_text.tres" id="2_duo0v"]
-[ext_resource type="Texture2D" uid="uid://5q3wpuphtnag" path="res://icon.svg" id="5_wiwkd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp6x5"]
 size = Vector2(211, 322)
@@ -11,31 +9,10 @@ size = Vector2(211, 322)
 [node name="Card" type="Node2D"]
 script = ExtResource("1_8cpji")
 
-[node name="Background" type="Sprite2D" parent="."]
+[node name="Image" type="Sprite2D" parent="."]
 position = Vector2(2.12499, -12.875)
 scale = Vector2(0.41626, 0.41626)
 texture = ExtResource("1_jh113")
-
-[node name="Title" type="Label" parent="."]
-offset_left = -83.0
-offset_top = 3.0
-offset_right = 81.0
-offset_bottom = 112.0
-text = "Destroy a Slime"
-label_settings = ExtResource("2_duo0v")
-horizontal_alignment = 1
-
-[node name="Body" type="Label" parent="."]
-offset_left = -75.0
-offset_top = 35.0
-offset_right = 89.0
-offset_bottom = 144.0
-text = "Destroy a Slime"
-label_settings = ExtResource("2_duo0v")
-
-[node name="Image" type="Sprite2D" parent="."]
-position = Vector2(1, -79)
-texture = ExtResource("5_wiwkd")
 
 [node name="Area2D" type="Area2D" parent="."]
 

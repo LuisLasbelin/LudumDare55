@@ -13,9 +13,8 @@ func _ready():
 	self.add_child(card_effect_inv)
 	card_effect = get_node("CardEffect")
 	# Set Card data
-	$Body.text = card_data.text
 	$Image.texture = card_data.image
-	$Title.text = card_data.title
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
