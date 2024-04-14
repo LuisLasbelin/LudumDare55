@@ -11,3 +11,9 @@ func destroy():
 	# delete card from scene and change card to discarded pile
 	GameState.discard(self.get_parent().card_data)
 	self.get_parent().queue_free()
+
+
+func discard():
+	GameState.current_mana += 10
+	print("DEBUG: the card ", get_parent().name, "was destroyed for 10 mana.")
+	self.destroy()

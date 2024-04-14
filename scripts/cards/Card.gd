@@ -28,6 +28,12 @@ func _on_area_2d_input_event(viewport, event : InputEvent, shape_idx):
 	if event.is_action_released("pick"):
 		# Check if it is on a valid area to use the card
 		var areas = $Area2D.get_overlapping_areas()
-		card_effect.use(areas)
-		picked = false
-		self.position = origin_position
+		for area in areas:
+			if area.name == "DiscardArea":
+				card_effect.discard()
+				return
+		var result = card_effect.use(areas)
+		if result == false:
+			print("DEBUG: could not use the card ", self.name)
+			picked = false
+			self.position = origin_position

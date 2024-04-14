@@ -3,6 +3,7 @@ extends Node
 var sacrifice = load("res://assets/cards/sacrifice/Sacrifice.tres")
 var summon_green_slime = load("res://assets/cards/summon_green_slime/SummonGreenSlime.tres")
 var electrify = load("res://assets/cards/electrify/Electrify.tres")
+var freeze = load("res://assets/cards/freeze/Freeze.tres")
 
 enum Effects {
 	ICE,
@@ -20,12 +21,16 @@ signal drawn_card(card : CardData)
 	electrify,
 	electrify,
 	electrify,
+	freeze,
+	freeze,
+	freeze,
+	freeze,
 	summon_green_slime,
 	summon_green_slime,
 	summon_green_slime,
 	summon_green_slime,
 	summon_green_slime,
-	summon_green_slime,
+	sacrifice,
 	sacrifice,
 	sacrifice,
 	sacrifice,
