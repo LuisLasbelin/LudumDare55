@@ -34,9 +34,13 @@ signal drawn_card(card : CardData)
 
 
 func draw_card():
-	cards_in_hand.append(cards_in_deck[0])
-	drawn_card.emit(cards_in_deck[0])
-	cards_in_deck.pop_at(0)
+	if cards_in_deck.size() > 0:
+		cards_in_hand.append(cards_in_deck[0])
+		drawn_card.emit(cards_in_deck[0])
+		cards_in_deck.pop_at(0)
+		return true
+	print("DEBUG: there are no cards left in the deck.")
+	return false
 
 
 func shuffle_deck():
@@ -47,5 +51,5 @@ func shuffle_deck():
 func discard(card : CardData):
 	cards_in_discard.append(cards_in_hand[cards_in_hand.find(card)])
 	cards_in_hand.erase(card)
-	# Draw a new one
-	if cards_in_deck.size() > 0: draw_card()
+	# Draw a new one after a small time offset
+	get_tree().create_timer(0.5).timeout.connect(draw_card)
