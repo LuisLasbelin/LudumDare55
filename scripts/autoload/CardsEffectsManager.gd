@@ -1,16 +1,16 @@
 extends Node
 
 var creature_template = preload("res://scenes/creature.tscn")
-@export var spawns = [
-	{
-		"position" : Vector2(337,583),
-		"creature" : null
-	},
-	{
-		"position" : Vector2(580,583),
-		"creature" : null
-	}
-]
+@export var spawns = []
+
+
+func _ready():
+	var spawn_nodes = get_tree().get_nodes_in_group("Spawn")
+	for s in spawn_nodes:
+		spawns.append({
+			"spawn_node": s,
+			"creature": null
+		})
 
 
 func summon(creature_data : CreatureData): 
@@ -18,7 +18,7 @@ func summon(creature_data : CreatureData):
 		if spawn["creature"] == null:
 			var creature = creature_template.instantiate()
 			creature.data = creature_data
-			creature.position = spawn["position"]
+			creature.position = spawn["spawn_node"].position
 			get_parent().add_child(creature)
 			spawn["creature"] = creature
 			return true
@@ -36,7 +36,7 @@ func add_effect(effect : GameState.Effects, creature : Creature):
 func sacrifice(creature : Creature):
 	GameState.current_mana += creature.get_mana()
 	for spawn in spawns:
-		if spawn["position"] == creature.position: 
+		if spawn["spawn_node"] == creature.get_parent(): 
 			spawn["creature"] = null
 	creature.queue_free()
 	print("DEBUG: sacrificed for ", creature.get_mana(), " player now has ", GameState.current_mana, " mana.")
