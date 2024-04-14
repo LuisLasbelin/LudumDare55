@@ -5,10 +5,6 @@ var summon_green_slime = load("res://assets/cards/summon_green_slime/SummonGreen
 var electrify = load("res://assets/cards/electrify/Electrify.tres")
 var freeze = load("res://assets/cards/freeze/Freeze.tres")
 
-enum Effects {
-	ICE,
-	ZAP
-}
 
 signal drawn_card(card : CardData)
 @export var current_mana : int = 0

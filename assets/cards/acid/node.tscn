@@ -1,7 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bigf7psya6ac"]
+[gd_scene load_steps=2 format=3 uid="uid://btvlvf70jvm7m"]
 
 [ext_resource type="Script" path="res://scripts/cards/EffectCard.gd" id="1_rlxjt"]
 
 [node name="CardEffect" type="Node"]
 script = ExtResource("1_rlxjt")
-effect = "ice"
+effect = "acid"

@@ -7,4 +7,6 @@ func _ready():
 	GameState.draw_card()
 	GameState.draw_card()
 	GameState.draw_card()
+	GameState.draw_card()
+	GameState.draw_card()
 

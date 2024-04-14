@@ -26,7 +26,7 @@ func summon(creature_data : CreatureData):
 	return false
 
 
-func add_effect(effect : GameState.Effects, creature : Creature):
+func add_effect(effect : String, creature : Creature):
 	GameState.current_mana += creature.get_mana()
 	creature.effects.append(effect)
 	print("DEBUG: ", creature.name, " now has ", effect)

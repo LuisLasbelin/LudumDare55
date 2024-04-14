@@ -3,7 +3,7 @@ class_name Creature
 
 
 var data : CreatureData
-var effects : Array[GameState.Effects] = []
+var effects : Array[String] = []
 
 
 func ready():
@@ -16,8 +16,8 @@ func ready():
 func get_mana() -> int:
 	var multiplier = 1
 	var added = 0
-	if effects.has(GameState.Effects.ZAP):
+	if effects.has("zap"):
 		multiplier += 0.2
-	if effects.has(GameState.Effects.ZAP) and effects.has(GameState.Effects.ICE):
+	if effects.has("zap") and effects.has("ice"):
 		multiplier += 1
 	return ceil((data.mana_on_sacrifice + added) * multiplier)
