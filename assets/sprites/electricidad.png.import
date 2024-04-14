@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://nnbapl1ix8hf"
-path="res://.godot/imported/orb.png-403c4ccf8a5c48885b7ed2206088af93.ctex"
+uid="uid://cgeyxre7546ln"
+path="res://.godot/imported/electricidad.png-e07e0d66092563033557163de0cd2931.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/orb.png"
-dest_files=["res://.godot/imported/orb.png-403c4ccf8a5c48885b7ed2206088af93.ctex"]
+source_file="res://assets/sprites/electricidad.png"
+dest_files=["res://.godot/imported/electricidad.png-e07e0d66092563033557163de0cd2931.ctex"]
 
 [params]
 

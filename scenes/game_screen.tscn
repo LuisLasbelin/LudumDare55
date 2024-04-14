@@ -16,6 +16,17 @@ input_pickable = false
 position = Vector2(658.5, 347)
 shape = SubResource("RectangleShape2D_xktb1")
 
+[node name="Spawns" type="Node2D" parent="."]
+
+[node name="1" type="Node2D" parent="Spawns" groups=["Spawn"]]
+position = Vector2(265, 426)
+
+[node name="2" type="Node2D" parent="Spawns" groups=["Spawn"]]
+position = Vector2(517, 418)
+
+[node name="3" type="Node2D" parent="Spawns" groups=["Spawn"]]
+position = Vector2(784, 416)
+
 [node name="Hand" type="Node2D" parent="."]
 position = Vector2(225, 892)
 script = ExtResource("2_u7uyj")

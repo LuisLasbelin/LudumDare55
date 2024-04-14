@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://bosv738pkhwyg" path="res://assets/cards/sacrifice/node.tscn" id="1_m5of2"]
 [ext_resource type="Script" path="res://scripts/cards/CardData.gd" id="1_yhx6m"]
-[ext_resource type="Texture2D" uid="uid://gijnwrqxkv6l" path="res://assets/sprites/card.png" id="2_bvgt5"]
+[ext_resource type="Texture2D" uid="uid://dx83l3lrorbf6" path="res://assets/sprites/sacrificio.png" id="2_j0pa4"]
 
 [resource]
 script = ExtResource("1_yhx6m")
 title = "Sacrifice"
-image = ExtResource("2_bvgt5")
+image = ExtResource("2_j0pa4")
 text = "Sacrifice a creature and gain mana from it"
 card_effect_node = ExtResource("1_m5of2")
