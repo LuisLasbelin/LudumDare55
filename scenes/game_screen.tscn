@@ -1,9 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://7becxd7tbxbr"]
+[gd_scene load_steps=9 format=3 uid="uid://7becxd7tbxbr"]
 
 [ext_resource type="Script" path="res://scripts/StartGame.gd" id="1_abc0c"]
 [ext_resource type="Texture2D" uid="uid://cvh4kh31ol85" path="res://assets/sprites/tablero.png" id="2_lpe62"]
 [ext_resource type="Script" path="res://scripts/Hand.gd" id="2_u7uyj"]
+[ext_resource type="Shader" path="res://assets/shaders/mana_orb.gdshader" id="3_jw37k"]
 [ext_resource type="Texture2D" uid="uid://cliy08hqutdgj" path="res://assets/sprites/bola_mana.png" id="4_j2rte"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3l71w"]
+shader = ExtResource("3_jw37k")
+shader_parameter/mana = 0.5
+shader_parameter/amp = 0.5
+shader_parameter/vel = 1.0
+shader_parameter/intens = 0.05
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nv2iw"]
 radius = 212.059
@@ -22,6 +30,7 @@ offset = Vector2(960, 540)
 position = Vector2(1624, 808)
 
 [node name="BolaMana" type="Sprite2D" parent="Orb"]
+material = SubResource("ShaderMaterial_3l71w")
 texture = ExtResource("4_j2rte")
 
 [node name="DiscardArea" type="Area2D" parent="Orb"]
@@ -50,3 +59,11 @@ position = Vector2(926, 469)
 [node name="Hand" type="Node2D" parent="."]
 position = Vector2(189, 956)
 script = ExtResource("2_u7uyj")
+
+[node name="EndGameText" type="Label" parent="."]
+visible = false
+offset_left = 1580.0
+offset_top = 558.0
+offset_right = 1739.0
+offset_bottom = 627.0
+text = "COMPLETED!!"
