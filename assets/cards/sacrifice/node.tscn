@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bosv738pkhwyg"]
+
+[ext_resource type="Script" path="res://scripts/cards/SacrificeCard.gd" id="1_05c74"]
+
+[node name="CardEffect" type="Node"]
+script = ExtResource("1_05c74")

@@ -1,12 +1,40 @@
-[gd_scene load_steps=3 format=3 uid="uid://bbej6su5ftpfk"]
+[gd_scene load_steps=7 format=3 uid="uid://bbej6su5ftpfk"]
 
-[ext_resource type="Script" path="res://scripts/Creature.gd" id="1_48s7b"]
+[ext_resource type="Script" path="res://scripts/creatures/Creature.gd" id="1_k2jqe"]
 [ext_resource type="Texture2D" uid="uid://5q3wpuphtnag" path="res://icon.svg" id="2_vibeh"]
+[ext_resource type="Texture2D" uid="uid://dsbjp0ns1elp6" path="res://assets/sprites/fx/acid.png" id="3_05rts"]
+[ext_resource type="Texture2D" uid="uid://cei1u3cwogh60" path="res://assets/sprites/fx/zap.png" id="4_qde3k"]
+[ext_resource type="Texture2D" uid="uid://dqsveb8j0twr3" path="res://assets/sprites/fx/ice.png" id="5_srjjk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5u2qc"]
+size = Vector2(132, 135)
 
 [node name="Creature" type="Node2D"]
-script = ExtResource("1_48s7b")
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_k2jqe")
 metadata/_edit_vertical_guides_ = [337.0]
 metadata/_edit_horizontal_guides_ = [585.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_vibeh")
+
+[node name="CreatureArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CreatureArea"]
+position = Vector2(2, -3.5)
+shape = SubResource("RectangleShape2D_5u2qc")
+
+[node name="EffectsFXManager" type="Node2D" parent="."]
+
+[node name="acid" type="Sprite2D" parent="EffectsFXManager"]
+position = Vector2(61, -32)
+texture = ExtResource("3_05rts")
+
+[node name="zap" type="Sprite2D" parent="EffectsFXManager"]
+position = Vector2(-39, -46)
+texture = ExtResource("4_qde3k")
+
+[node name="ice" type="Sprite2D" parent="EffectsFXManager"]
+position = Vector2(-57, 29.5)
+scale = Vector2(0.551181, 0.545833)
+texture = ExtResource("5_srjjk")
