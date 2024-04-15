@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bjb5pwaap3br6"]
 
 [ext_resource type="Script" path="res://scripts/cards/Card.gd" id="1_8cpji"]
-[ext_resource type="Texture2D" uid="uid://udh7fhwf1nay" path="res://assets/sprites/acido.png" id="2_mffio"]
+[ext_resource type="Texture2D" uid="uid://udh7fhwf1nay" path="res://assets/sprites/cards/acido.png" id="2_mffio"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hp6x5"]
 size = Vector2(225.333, 345.333)

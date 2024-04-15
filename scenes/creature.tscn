@@ -10,6 +10,7 @@
 size = Vector2(132, 135)
 
 [node name="Creature" type="Node2D"]
+scale = Vector2(0.7, 0.7)
 script = ExtResource("1_k2jqe")
 metadata/_edit_vertical_guides_ = [337.0]
 metadata/_edit_horizontal_guides_ = [585.0]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgeyxre7546ln"
-path="res://.godot/imported/electricidad.png-e07e0d66092563033557163de0cd2931.ctex"
+uid="uid://udh7fhwf1nay"
+path="res://.godot/imported/acido.png-4dd7ab4eb5863df55459bed02e44827f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/electricidad.png"
-dest_files=["res://.godot/imported/electricidad.png-e07e0d66092563033557163de0cd2931.ctex"]
+source_file="res://assets/sprites/cards/acido.png"
+dest_files=["res://.godot/imported/acido.png-4dd7ab4eb5863df55459bed02e44827f.ctex"]
 
 [params]
 

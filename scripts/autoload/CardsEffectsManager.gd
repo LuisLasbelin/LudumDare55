@@ -18,8 +18,7 @@ func summon(creature_data : CreatureData):
 		if spawn["creature"] == null:
 			var creature = creature_template.instantiate()
 			creature.data = creature_data
-			creature.position = spawn["spawn_node"].position
-			get_parent().add_child(creature)
+			spawn["spawn_node"].add_child(creature)
 			spawn["creature"] = creature
 			return true
 	print("DEBUG: there are no places left to spawn another creature.")
@@ -37,7 +36,7 @@ func sacrifice(creature : Creature):
 	for spawn in spawns:
 		if spawn["spawn_node"] == creature.get_parent(): 
 			spawn["creature"] = null
-	print("DEBUG: sacrificed for ", creature.get_mana(), " player now has ", GameState.current_mana, " mana.")
 	GameState.current_mana += creature.get_mana()
+	print("DEBUG: sacrificed for ", creature.get_mana(), " player now has ", GameState.current_mana, " mana.")
 	creature.queue_free()
 	return true

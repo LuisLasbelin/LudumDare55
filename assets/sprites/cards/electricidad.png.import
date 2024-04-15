@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tyeevh0xsiwd"
-path="res://.godot/imported/slime.png-ef39d3a984e40a937a22dc6f527ce7e0.ctex"
+uid="uid://cgeyxre7546ln"
+path="res://.godot/imported/electricidad.png-cfddf2006752e1edc55975e585467137.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/slime.png"
-dest_files=["res://.godot/imported/slime.png-ef39d3a984e40a937a22dc6f527ce7e0.ctex"]
+source_file="res://assets/sprites/cards/electricidad.png"
+dest_files=["res://.godot/imported/electricidad.png-cfddf2006752e1edc55975e585467137.ctex"]
 
 [params]
 

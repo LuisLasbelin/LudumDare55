@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="CreatureData" load_steps=3 format=3 uid="uid://bht00wl74q725"]
 
 [ext_resource type="Script" path="res://scripts/creatures/CreatureData.gd" id="1_qoabr"]
-[ext_resource type="Texture2D" uid="uid://5q3wpuphtnag" path="res://icon.svg" id="2_l11l5"]
+[ext_resource type="Texture2D" uid="uid://b76ps1asdktff" path="res://assets/sprites/creatures/slime_tablero.png" id="2_8ig7e"]
 
 [resource]
 script = ExtResource("1_qoabr")
 mana_on_sacrifice = 10.0
-sprite = ExtResource("2_l11l5")
+sprite = ExtResource("2_8ig7e")
