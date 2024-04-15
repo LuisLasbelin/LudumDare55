@@ -27,17 +27,17 @@ func summon(creature_data : CreatureData):
 
 
 func add_effect(effect : String, creature : Creature):
-	GameState.current_mana += creature.get_mana()
-	creature.effects.append(effect)
+	var result = creature.add_effect(effect)
+	if result == false: return false
 	print("DEBUG: ", creature.name, " now has ", effect)
 	return true
 
 
 func sacrifice(creature : Creature):
-	GameState.current_mana += creature.get_mana()
 	for spawn in spawns:
 		if spawn["spawn_node"] == creature.get_parent(): 
 			spawn["creature"] = null
-	creature.queue_free()
 	print("DEBUG: sacrificed for ", creature.get_mana(), " player now has ", GameState.current_mana, " mana.")
+	GameState.current_mana += creature.get_mana()
+	creature.queue_free()
 	return true
