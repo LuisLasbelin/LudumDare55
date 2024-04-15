@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CardData" load_steps=4 format=3 uid="uid://csww72dbjtog3"]
 
-[ext_resource type="PackedScene" uid="uid://bigf7psya6ac" path="res://assets/cards/electrify/node.tscn" id="1_sdxn6"]
+[ext_resource type="PackedScene" uid="uid://bigf7psya6ab" path="res://assets/cards/electrify/node.tscn" id="1_cgi46"]
 [ext_resource type="Texture2D" uid="uid://cgeyxre7546ln" path="res://assets/sprites/electricidad.png" id="2_0xxt7"]
 [ext_resource type="Script" path="res://scripts/cards/CardData.gd" id="3_5yki0"]
 
@@ -9,4 +9,4 @@ script = ExtResource("3_5yki0")
 title = "Zap"
 image = ExtResource("2_0xxt7")
 text = "Electrifies a creature"
-card_effect_node = ExtResource("1_sdxn6")
+card_effect_node = ExtResource("1_cgi46")

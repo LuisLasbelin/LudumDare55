@@ -4,6 +4,7 @@ var sacrifice = load("res://assets/cards/sacrifice/Sacrifice.tres")
 var summon_green_slime = load("res://assets/cards/summon_green_slime/SummonGreenSlime.tres")
 var electrify = load("res://assets/cards/electrify/Electrify.tres")
 var freeze = load("res://assets/cards/freeze/Freeze.tres")
+var acid = load("res://assets/cards/acid/Acid.tres")
 
 
 signal drawn_card(card : CardData)
@@ -21,6 +22,12 @@ signal drawn_card(card : CardData)
 	freeze,
 	freeze,
 	freeze,
+	acid,
+	acid,
+	acid,
+	acid,
+	summon_green_slime,
+	summon_green_slime,
 	summon_green_slime,
 	summon_green_slime,
 	summon_green_slime,
